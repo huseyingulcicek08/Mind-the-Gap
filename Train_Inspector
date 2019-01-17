@@ -1,0 +1,12 @@
+public class TrainInspector {
+
+  public static int countMissingCarriages(String train) {
+    if(train == ""){
+      return 0;
+    }
+    String alpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    char last = train.charAt(train.length() - 1);
+    int max = alpha.indexOf(last) + 1;    
+    return max - train.length();
+  }
+}
